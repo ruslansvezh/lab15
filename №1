@@ -1,0 +1,57 @@
+#include<iostream>
+#include<cmath>
+usingnamespacestd;
+int main()
+{
+	setlocale(0, "");
+	int N;
+	cout<<"Введите размер массивов: "<<endl;
+	cin>> N;
+	int* arrayA = newint[N];
+	int* arrayB = newint[N];
+	int* arrayC = newint[N];
+	cout<<"Введите элементы массива A: "<<endl;
+	for (int i = 0; i < N; i++)
+	{
+		cin>>arrayA[i];
+	}
+	cout<<"Введите элементы массива B: "<<endl;
+	for (int i = 0; i < N; i++)
+	{
+		cin>>arrayB[i];
+	}
+	for(int x=0;x<N;x++)
+	{
+		for (int i = 0; i < N; i++)
+		{
+			arrayC[i] = arrayA[i];
+			
+		}
+	}
+	for (int x = 0; x < N; x++)
+	{
+		for (int i = 0; i < N; i++)
+		{
+			arrayA[i] = arrayB[i];
+
+		}
+	}
+	for (int x = 0; x < N; x++)
+	{
+		for (int i = 0; i < N; i++)
+		{
+			arrayB[i] = arrayC[i];
+
+		}
+	}
+	cout<<"Измененный массивА: "<<endl;
+	for (int i = 0; i < N; i++)
+	{
+		cout<<arrayA[i] <<endl;
+	}
+	cout<<"Измененный массивB: "<<endl;
+	for (int i = 0; i < N; i++)
+	{
+		cout<<arrayB[i] <<endl;
+	}
+}
