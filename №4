@@ -1,0 +1,59 @@
+#include<iostream>
+#include<cmath>
+usingnamespacestd;
+int main()
+{
+	setlocale(0, "");
+	intN,k=0, j=0;
+	double SR=0;
+	cout<<"Введите количество элементов массива: ";
+	cin>> N;
+	int* arrayA = newint[N];
+	cout<<"Введите элементы массива : "<<endl;
+	for (int i = 0; i < N; i++)
+	{
+		cin>>arrayA[i];
+	}
+	int max = arrayA[0];
+	for (int i = 0; i < N; i++)
+	{
+		if (arrayA[i] > max)
+		{
+			max = arrayA[i];
+			k = i;
+		}
+	}
+
+	int min = arrayA[0];
+
+	for (int i = 0; i < N; i++)
+	{
+		if (arrayA[i] < min)
+		{
+			min = arrayA[i];
+			j = i;
+		}
+	}
+
+	if (k > j)
+	{
+		for (int i=j+1; i < k; i++)
+		{
+			arrayA[i] = 0;
+		}
+	}
+	else
+	{
+		for (int i = k + 1; i < j; i++)
+		{
+			arrayA[i] = 0;
+		}
+	}
+
+	cout<<"Обновленный массив А: "<<endl;
+
+	for (int i = 0; i < N; i++)
+	{
+		cout << arrayA[i] << endl;
+	}
+}
